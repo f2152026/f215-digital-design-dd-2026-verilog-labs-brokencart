@@ -33,6 +33,9 @@ module cla4(
   wire [3:0] g;
   wire [4:1] c;
 
+  assign #(2) p = a ^ b;
+  assign #(2) g = a & b;
+
   // TODO: your gate-level P/G, carry, and sum logic goes here.
   // (cout should be connected to c4.) Remember the delay on every gate.
   assign #(2) c[1] = g[0] | (p[0] & cin);
