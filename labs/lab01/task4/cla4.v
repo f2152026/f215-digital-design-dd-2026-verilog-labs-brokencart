@@ -44,4 +44,6 @@ module cla4(
   assign #(2) c[4] = g[3] | (p[3] & g[2]) | (p[3] & p[2] & g[1]) | (p[3] & p[2] & p[1] & g[0]) | (p[3] & p[2] & p[1] & p[0] & cin);
   assign cout = c[4];
 
+  assign #(2) sum = p ^ {c[3], c[2], c[1], cin};
+
 endmodule
