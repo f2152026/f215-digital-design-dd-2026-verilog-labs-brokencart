@@ -37,8 +37,10 @@ module tb;
       end
     end
 
-    if (errors == 0) $display("PASS: all cases correct");
-    else $display("FAIL: %0d errors", errors);
+    $write("SUMMARY: %0d/16 passed", 16 - errors);
+    if (errors == 0) $write(" -- PASS");
+    else $write(" -- FAIL (%0d errors)", errors);
+    $display;
     $finish;
   end
 

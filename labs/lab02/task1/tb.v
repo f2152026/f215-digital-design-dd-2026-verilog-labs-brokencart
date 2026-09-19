@@ -36,6 +36,7 @@ module tb;
     #5 t_i0 = 0; t_i1 = 1; t_s = 1;
     #5 t_i0 = 1; t_i1 = 1; t_s = 0;
     #5 t_i0 = 1; t_i1 = 1; t_s = 1;
+    #5 $finish;
   end
 
   initial

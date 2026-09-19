@@ -33,8 +33,8 @@ module tb;
                 t_exp_result = t_a + t_b;
             else
                 t_exp_result = t_a - t_b;
-            if (t_exp_result != t_result) begin
-                $display("FAIL at time %0t: a=%b b=%b c=%c  got result=%b  expected result=%b", $time, t_a, t_b, t_op, t_result, t_exp_result);
+            if (t_exp_result !== t_result) begin
+                $display("FAIL at time %0t: a=%b b=%b op=%b  got result=%b  expected result=%b", $time, t_a, t_b, t_op, t_result, t_exp_result);
                 errors = errors + 1;
             end
         end
