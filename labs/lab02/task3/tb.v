@@ -31,7 +31,7 @@ module tb;
 
         t_exp_GT = t_A > t_B; t_exp_LT = t_A < t_B; t_exp_EQ = t_A == t_B;
         if ({t_exp_GT, t_exp_LT, t_exp_EQ} !== {t_GT, t_LT, t_EQ}) begin
-          $display("FAIL: A=%b B=%b | got GT=%b LT=%b EQ=%b, expected GT=%b LT=%b EQ=%b", t_A, t_B, t_GT, t_LT, t_EQ, t_exp_GT, t_exp_LT, t_exp_EQ);
+          $display("FAIL at time %0t: A=%b B=%b  got GT=%b LT=%b EQ=%b  expected GT=%b LT=%b EQ=%b", $time, t_A, t_B, t_GT, t_LT, t_EQ, t_exp_GT, t_exp_LT, t_exp_EQ);
           errors = errors + 1;
         end
       end
